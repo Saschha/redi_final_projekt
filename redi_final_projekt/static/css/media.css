@@ -1,0 +1,275 @@
+/*-------Tablet---------*/
+@media screen and (min-width: 576px) and (max-width: 921px) {
+
+
+    /*Navigation*/
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #burgermenu {
+        _top: 20px;
+        _right: 0px;
+        width: 40px;
+        display: block;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    #kreuz {
+        cursor: pointer;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        width: 40px;
+        z-index: 999;
+    }
+
+    .animation {
+        position: absolute;
+        transition: height 1s ease-in-out;
+        top: 0;
+        right: 0;
+        height: 0;
+        overflow: hidden;
+        z-index: 10;
+        background-color: var(--dunkel_blau);
+        opacity: 0.9;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
+    }
+
+    .animation li {
+        list-style: none;
+        display: block;
+        line-height: 3;
+    }
+
+    .animation li a {
+        color: var(--hell-rosa);
+        font-family: "Comfortaa";
+        font-weight: 700;
+        font-size: 1.25rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .show {
+        transition: height 1s ease-in-out;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: var(--dunkel_blau);
+        opacity: 0.9;
+        width: 80%;
+        padding-left: 40px;
+    }
+
+    /* Contact */
+    #contact main h3 {
+        width: 60%;
+        margin: 40px auto;
+        font-size: 1.75rem;
+    }
+
+    form {
+        width: 60%;
+        gap: 5px;
+    }
+}
+
+
+/*-------Decstop--------*/
+@media screen and (min-width: 922px) {
+
+    /*HEADER*/
+    header {
+        padding: 20px 40px;
+    }
+
+    #logo {
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #burgermenu {
+        display: none;
+    }
+
+    #kreuz {
+        display: none;
+    }
+
+    .animation {
+        position: relative;
+        height: auto;
+        transition: none;
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .animation li {
+        list-style: none;
+        padding: 0 1rem;
+    }
+
+    .animation li a {
+        font-family: "Comfortaa";
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: var(--hell-rosa);
+    }
+
+    /* Section profile */
+    .profile {
+        display: flex;
+        background-color: var(--hell-rosa);
+        padding: 40px 80px 0 80px;
+    }
+
+    .profile h2 {
+        margin-left: 20px;
+    }
+
+    .profile figure {
+        width: 400%;
+    }
+
+    .profile p {
+        color: var(--textcolor-main);
+        padding-left: 20px;
+        font-size: 1.125rem;
+    }
+
+    /* Section interests */
+
+    .interests h2 {
+        padding: 20px 40px;
+        font-size: 2rem;
+    }
+
+    .foto {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 30px 0 30px;
+    }
+
+    .interests img {
+        padding: 10px;
+    }
+
+    .interests h3 {
+        font-size: 2rem;
+        padding-top: 0;
+    }
+
+    /* Section cv */
+    #cv {
+        padding: 30px 20%;
+        font-size: 2.5rem;
+    }
+
+    .cv article {
+        display: flex;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .cv article h4 {
+        width: 40%;
+        padding: 40px;
+        font-size: 1.5rem;
+    }
+
+
+
+    .cv article ul {
+        width: 60%;
+        padding: 20px 0 20px 40px;
+    }
+
+    .education {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 80px;
+    }
+
+    footer h3 {
+        padding-bottom: 20px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .awesome a {
+        font-size: 2.5rem;
+    }
+
+    /*  Portfolio  */
+    .plakate,
+    .layout,
+    .web {
+        display: flex;
+        justify-content: space-between;
+        width: 93%;
+        margin: 0 auto;
+    }
+
+    .plakate figure,
+    .layout figure,
+    .web figure {
+        width: 31%;
+    }
+
+    .portfolio h3,
+    .layout h3,
+    .web h3 {
+        width: 91%;
+        margin: 40px auto;
+    }
+
+    .web {
+        padding-bottom: 40px;
+    }
+
+    #portfolio footer {
+        margin: 0;
+    }
+
+    /* Contact */
+    #contact main h3 {
+        width: 40%;
+        margin: 40px auto;
+        font-size: 1.75rem;
+        padding: 20px 0 20px 40px;
+    }
+
+    form {
+        width: 40%;
+        gap: 10px;
+    }
+
+    label {
+        font-size: 1.75rem;
+    }
+
+}
