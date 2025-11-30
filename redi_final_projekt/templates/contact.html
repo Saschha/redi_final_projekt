@@ -5,46 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alex Smit</title>
-  <link rel="stylesheet" href="../static/css/all.css">
-  <link rel="stylesheet" href="../static/css/fontawesome.css">
-  <link rel="stylesheet" href="../static/css/style.css">
-  <link rel="stylesheet" href="../static/css/media.css">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="../favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}">
 </head>
 
 <body id="contact">
   <header class="flex">
     <figure>
-      <a href="index.html"><img src="../static/img/logo_lora_smith.svg" alt="logo" id="logo"></a>
+      <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo_lora_smith.svg') }}" alt="logo" id="logo"></a>
     </figure>
 
     <h1>Lora Smith</h1>
 
     <nav>
       <ul class="animation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
       </ul>
     </nav>
 
-    <figure id="burgermenu" class="display">
-      <img src="../static/img/burger_menu.svg" alt="Hamburgermenu">
+        <figure id="burgermenu" class="display">
+      <img src="{{ url_for('static', filename='img/burger_menu.svg') }}" alt="Hamburgermenu">
     </figure>
 
     <figure id="kreuz" class="display">
-      <img src="../static/img/close_menu.svg" alt="Cross">
+      <img src="{{ url_for('static', filename='img/close_menu.svg') }}" alt="Cross">
     </figure>
   </header>
 
   <main>
     <section>
       <h3>If you have any questions, please write to me. :)</h3>
-      <form id="kontaktFormular">
+      <form id="kontaktFormular" action="{{ url_for('submit') }}" method="post">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -52,11 +53,10 @@
         <input type="email" id="email" name="email" required><br><br>
 
         <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="20"required></textarea><br><br>
+        <textarea id="message" name="message" rows="4" cols="20" required></textarea><br><br>
 
         <button type="submit">Submit</button>
       </form>
-
     </section>
   </main>
 
