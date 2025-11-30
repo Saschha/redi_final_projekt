@@ -55,7 +55,7 @@ contact.html (Must contain the form posting to the /submit route)
 
 Open your terminal in the project directory and execute the main application file:
 
-_python contact.py
+python contact.py
 
 
 The console will display the running URL (e.g., http://127.0.0.1:5000/).
